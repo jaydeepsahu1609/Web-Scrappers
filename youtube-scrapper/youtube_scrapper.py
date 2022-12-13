@@ -318,7 +318,7 @@ class YTScrapper:
 if __name__ == '__main__':
     # use this to scrap videos
     print("------- SCRAPPING VIDEO DATA ----")
-    YTScrapper.scrap_youtube_videos(channel_link='https://www.youtube.com/channel/UCItJsxqZNWUyxFn-A2tzizQ')
+    YTScrapper.scrap_youtube_videos(channel_link='https://www.youtube.com/channel/UCItJs xqZNWUyxFn-A2tzizQ')
 
     # use this to scrap playlists
     print("\n------- SCRAPPING PLAYLIST DATA ----")
