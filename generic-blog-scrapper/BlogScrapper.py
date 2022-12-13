@@ -69,6 +69,8 @@ class BlogScrapper:
         :return: Tag that holds the whole content of blog
         :rtype: bs4.Tag
         """
+        print("inside get_parent_tag_in_blog_page")
+
         soup = BeautifulSoup(page_source, 'html.parser')
         # print(soup.prettify())
 
@@ -98,9 +100,8 @@ class BlogScrapper:
         :return: number of words in the given data
         :rtype: int
         """
-        word_count = 0
-
         print("inside word_counter")
+        word_count = 0
 
         # split the sentences
         sentences = data.split('\n')
@@ -135,7 +136,7 @@ class BlogScrapper:
         :return: word-count of the blog
         :rtype: int
         """
-        print("Inside scrap_blog")
+        print("Inside get_word_count_from_blog_url")
 
         start = time.time()
 
@@ -167,7 +168,7 @@ class BlogScrapper:
         :return : all the heading and subheadings within the blog
         :rtype: list of dict
         """
-        print("Inside scrap_blog")
+        print("Inside get_headings_sub_headings_from_blog_url")
 
         start = time.time()
 
@@ -237,9 +238,6 @@ if __name__ == '__main__':
         'https://www.vidhikarya.com/legal-blog/online-business-difficulty-with-consumers-compliance-and-fake-jobs'
     ]
 
-    urls = [
-        'https://www.vidhikarya.com/legal-blog/online-business-difficulty-with-consumers-compliance-and-fake-jobs'
-    ]
     for url in urls:
         blog_word_count = BlogScrapper.get_word_count_from_blog_url(blog_url=url)
         print(blog_word_count)
